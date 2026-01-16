@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styler</title>
+    <style>
+        .text-here {
+            font-size: 55px;
+            font-family: sans-serif;
+            color: black;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            text-align: left;
+            letter-spacing: normal;
+            word-spacing: normal;
+            transition: all 0.2s ease;
+        }
+
+        .stylebt {
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
+
+        #colorbox {
+            width: 120px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Text Container -->
+    <div class='text-here' id='text-container'>This is some example text</div>
+
+    <!-- Color Change -->
+    <br>
+    <input type="text" id="colorbox" placeholder="Enter color name">
+    <button id="colorchange">Change Colour</button>
+
+    <br><br>
+
+    <!-- Font Size Slider -->
+    <input type="range" id="fontsize" min="10" max="100" value="55">
+    <br><br>
+
+    <!-- Style Buttons -->
+    <button id="italic" class="stylebt">Italics</button>
+    <button id="underline" class="stylebt">Underline</button>
+    <button id="bold" class="stylebt">Bold</button>
+
+    <br><br>
+
+    <!-- Font Family Dropdown -->
+    <select id="list">
+        <option value="serif">Serif</option>
+        <option value="sans-serif" selected>Sans-Serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="cursive">Cursive</option>
+        <option value="fantasy">Fantasy</option>
+    </select>
+
+    <br><br>
+
+    <!-- Get CSS Button -->
+    <button id="getstyle">Get CSS</button>
+
+    <br><br>
+
+    <!-- CSS Output -->
+    <p id="css-props"></p>
+
+    <script>
+        const textDiv = document.getElementById('text-container');
+
+        // Change Color
+        document.getElementById('colorchange').addEventListener('click', function() {
+            const color = document.getElementById('colorbox').value.trim();
+            if(color) {
+                textDiv.style.color = color;
+            }
+        });
+
+        // Change Font Size
+        document.getElementById('fontsize').addEventListener('input', function() {
+            textDiv.style.fontSize = this.value + 'px';
+        });
+
+        // Toggle Italic
+        document.getElementById('italic').addEventListener('click', function() {
+            textDiv.style.fontStyle = (textDiv.style.fontStyle === 'italic') ? 'normal' : 'italic';
+        });
+
+        // Toggle Underline
+        document.getElementById('underline').addEventListener('click', function() {
+            textDiv.style.textDecoration = (textDiv.style.textDecoration === 'underline') ? 'none' : 'underline';
+        });
+
+        // Toggle Bold
+        document.getElementById('bold').addEventListener('click', function() {
+            textDiv.style.fontWeight = (textDiv.style.fontWeight === 'bold') ? 'normal' : 'bold';
+        });
+
+        // Change Font Family
+        document.getElementById('list').addEventListener('change', function() {
+            textDiv.style.fontFamily = this.value;
+        });
+
+        // Get CSS Properties
+        document.getElementById('getstyle').addEventListener('click', function() {
+            const computedStyle = window.getComputedStyle(textDiv);
+            const cssString = 
+                'color: ' + computedStyle.color + '; ' +
+                'font-size: ' + computedStyle.fontSize + '; ' +
+                'font-family: ' + computedStyle.fontFamily + '; ' +
+                'text-decoration: ' + computedStyle.textDecorationLine + '; ' +
+                'font-style: ' + computedStyle.fontStyle + '; ' +
+                'font-weight: ' + computedStyle.fontWeight + '; ' +
+                'line-height: ' + computedStyle.lineHeight + '; ' +
+                'text-align: ' + computedStyle.textAlign + '; ' +
+                'letter-spacing: ' + computedStyle.letterSpacing + '; ' +
+                'word-spacing: ' + computedStyle.wordSpacing + ';';
+            
+            document.getElementById('css-props').innerText = cssString;
+        });
+    </script>
+
+</body>
+</html>
