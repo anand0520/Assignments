@@ -3,75 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Modern Webpage</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Modern Agency | Creative Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">My<span>Example</span></div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+        <nav class="navbar">
+            <div class="logo">My<span>Tech</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        
-        <aside class="sidebar">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Latest News</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-            <div class="ad-box">
-                <p>Check out our new summer collection!</p>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Elevate Your <span>Digital Presence</span></h1>
+            <p>We craft high-performance websites and strategic marketing plans that turn visitors into loyal customers.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">Get Started</a>
+                <a href="#" class="btn-secondary">View Work</a>
             </div>
-        </aside>
+        </div>
+    </section>
 
+    <div class="container wrapper">
         <main class="content">
-            <h2>Featured Services</h2>
+            <div class="section-title">
+                <span>What we do</span>
+                <h2>Featured Services</h2>
+            </div>
+            
             <div class="box-container">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400" alt="Web Design">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600" alt="Web Design">
+                        <div class="badge">Popular</div>
+                    </div>
                     <div class="card-body">
+                        <i class="fas fa-laptop-code icon-box"></i>
                         <h3>Web Design</h3>
                         <p>Creating beautiful, responsive websites tailored to your specific brand identity.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400" alt="Marketing">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600" alt="Marketing">
+                    </div>
                     <div class="card-body">
+                        <i class="fas fa-bullhorn icon-box"></i>
                         <h3>Marketing</h3>
                         <p>Strategic digital marketing campaigns that drive real results and high engagement.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400" alt="Analytics">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600" alt="Analytics">
+                    </div>
                     <div class="card-body">
+                        <i class="fas fa-chart-line icon-box"></i>
                         <h3>Analytics</h3>
                         <p>Deep data analysis to help you understand your customers and grow your business.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Latest News</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Resources</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                </ul>
+            </div>
+            <div class="ad-box">
+                <i class="fas fa-tags"></i>
+                <h4>Summer Sale!</h4>
+                <p>Check out our new summer collection and get 20% off.</p>
+                <a href="#" class="btn-ad">Shop Now</a>
+            </div>
+        </aside>
     </div>
 
     <footer>
-        <p>&copy; 2024 MyExample Design. All rights reserved. | Built with Passion.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 MyTech Design. Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> for the web.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
 </body>
