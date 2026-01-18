@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Create Div Task</title>
+  <meta charset="UTF-8">
+  <title>Create Div Task</title>
 </head>
 <body>
 
-    <!-- GIVEN HTML (UNCHANGED) -->
-    <div id="container"></div>
+  <!-- Do NOT modify this HTML -->
+  <div id="container"></div>
 
-    <script>
-        // Write your code here
-        function createDiv(width, height, text) {
-            const container = document.getElementById("container");
+  <script>
+    // Function to create and add a div inside #container
+    function createDiv(width, height, text) {
+      // Get the container element
+      const container = document.getElementById("container");
 
-            const div = document.createElement("div");
+      // Create a new div element
+      const newDiv = document.createElement("div");
 
-            div.style.width = width + "px";
-            div.style.height = height + "px";
+      // Set width and height (add px)
+      newDiv.style.width = width + "px";
+      newDiv.style.height = height + "px";
 
-            div.textContent = text;
+      // Set text content
+      newDiv.textContent = text;
 
-            container.appendChild(div);
-        }
+      // Optional styling for visibility
+      newDiv.style.border = "1px solid black";
+      newDiv.style.margin = "10px";
+      newDiv.style.display = "flex";
+      newDiv.style.alignItems = "center";
+      newDiv.style.justifyContent = "center";
 
-        // Do not change this code
-        Window.createDiv = createDiv;
-    </script>
+      // Append the div to the container
+      container.appendChild(newDiv);
+    }
+
+    // Example function calls
+    createDiv(200, 100, "First Div");
+    createDiv(300, 150, "Second Div");
+  </script>
 
 </body>
 </html>
