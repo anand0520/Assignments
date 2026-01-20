@@ -6,37 +6,34 @@
 </head>
 <body>
 
-  <!-- Do NOT modify this HTML -->
+  
   <div id="container"></div>
 
   <script>
-    // Function to create and add a div inside #container
+   
     function createDiv(width, height, text) {
-      // Get the container element
+
       const container = document.getElementById("container");
 
-      // Create a new div element
+      
       const newDiv = document.createElement("div");
 
-      // Set width and height (add px)
       newDiv.style.width = width + "px";
       newDiv.style.height = height + "px";
 
-      // Set text content
       newDiv.textContent = text;
 
-      // Optional styling for visibility
+      
       newDiv.style.border = "1px solid black";
       newDiv.style.margin = "10px";
       newDiv.style.display = "flex";
       newDiv.style.alignItems = "center";
       newDiv.style.justifyContent = "center";
 
-      // Append the div to the container
       container.appendChild(newDiv);
     }
 
-    // Example function calls
+    
     createDiv(200, 100, "First Div");
     createDiv(300, 150, "Second Div");
   </script>
